@@ -1,6 +1,8 @@
 
 trigger:
 - main
+pool:
+      vmImage: 'windows-2019'
 
 variables:
   # Azure service connection established during pipeline creation
@@ -8,9 +10,6 @@ variables:
   appName: functionwithdevops
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
-
-pool:
-      vmImage: 'windows-2019'
 steps:
 - script: |
     dotnet restore
